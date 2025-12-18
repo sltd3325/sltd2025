@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<img src="logo.png" class="logo">
+
+<div class="center-box">
+  <h1>Nhập mật mã</h1>
+
+  <input type="password" id="password" placeholder="••••">
+  <p id="error"></p>
+
+  <button onclick="checkPassword()">Submit</button>
+</div>
+
+<script>
+function checkPassword() {
+  const pass = document.getElementById("password").value;
+  const error = document.getElementById("error");
+
+  if (pass === "3325") {
+    window.location.href = "survey.html";
+  } else {
+    error.innerText = "mật khẩu sai :(";
+  }
+}
+</script>
+
+</body>
+</html>
